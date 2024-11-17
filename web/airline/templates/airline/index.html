@@ -1,4 +1,6 @@
 {%extends 'airline/layout.html'%}
 {%block content%}
-    <h1>Airline</h1>
+    {%for passenger in passenger_list%}
+        <p>{{passenger.name}} - {{passenger.age}}</p>
+    {%endfor%}
 {%endblock%}
