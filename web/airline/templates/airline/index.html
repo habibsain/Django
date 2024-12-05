@@ -1,5 +1,10 @@
 {%extends 'airline/layout.html'%}
 {%block content%}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input placeholder="passenger name" type="text" name="passenger_name">
+        <input type="submit" value="Search">
+    </form>
     {%for passenger in passenger_list%}
         <p>{{passenger.name}} - {{passenger.age}}</p>
     {%endfor%}
